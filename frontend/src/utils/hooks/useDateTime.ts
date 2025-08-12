@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { formatTimeNow, formatDateNow } from "../datetime/formatters";
+import { formatTimeNow, formatDateNow } from "../datetime/datetimeFormatter";
 
 export function useDateTime() {
   const [time, setTime] = useState(formatTimeNow);

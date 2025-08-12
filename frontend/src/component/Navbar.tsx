@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ICONS } from "../utils/icons/icons";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ export function Navbar() {
             isMenuOpen ? "-rotate-90" : ""
           }`}
         >
-          <img src="images/Grip Lines.svg" alt="Menu" />
+          <img src={ICONS.MENU} alt="Menu" className="h-6 w-6" />
         </button>
 
         <ul

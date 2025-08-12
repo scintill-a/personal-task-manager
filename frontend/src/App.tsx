@@ -1,5 +1,7 @@
 import { Time } from "./component/DateTime";
 import { Navbar } from "./component/Navbar";
+import { Tools } from "./component/Tools";
+import { ICONS } from "./utils/icons/icons";
 
 function App() {
   return (
@@ -7,6 +9,10 @@ function App() {
       <div className="bg-[#2D2D2D] min-h-screen">
         <Navbar />
         <Time />
+        <Tools
+          sortIcons={[ICONS.WARNING, ICONS.CLOCK, ICONS.SLEEP]}
+          toolIcon={ICONS.PLUS_MATH}
+        />
       </div>
     </>
   );
