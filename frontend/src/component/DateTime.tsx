@@ -51,8 +51,8 @@ export function Time() {
   return (
     <>
       <div className="flex items-center flex-col text-white">
-        <span>{currentTime}</span>
-        <span>{currentDate}</span>
+        <span className="text-4xl pt-5">{currentTime}</span>
+        <span className="text-">{currentDate}</span>
       </div>
     </>
   );
