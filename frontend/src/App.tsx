@@ -1,5 +1,6 @@
 import { Time } from "./component/DateTime";
 import { Navbar } from "./component/Navbar";
+import { TaskContainer } from "./component/TaskContainer";
 import { Tools } from "./component/Tools";
 import { ICONS } from "./utils/icons/icons";
 
@@ -13,6 +14,7 @@ function App() {
           sortIcons={[ICONS.WARNING, ICONS.CLOCK, ICONS.SLEEP]}
           toolIcon={ICONS.PLUS_MATH}
         />
+        <TaskContainer />
       </div>
     </>
   );

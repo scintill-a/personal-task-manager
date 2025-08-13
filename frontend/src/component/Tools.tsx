@@ -42,7 +42,7 @@ export function Tools({ sortIcons, toolIcon }: ToolIconsProps) {
             />
           </div>
         </div>
-        <div className="w-full  h-[0.5px] bg-[#BDBDBD] "></div>
+        <div className="w-full h-[1px] bg-[#BDBDBD] "></div>
       </div>
     </>
   );

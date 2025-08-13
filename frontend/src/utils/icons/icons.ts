@@ -1,5 +1,5 @@
 import menuIcon from "../../assets/images/Grip Lines.svg";
-import warningIcon from "../../assets/images/Error.svg";
+import warningIcon from "../../assets/images/Warning.svg";
 import clockIcon from "../../assets/images/Clock.svg";
 import sleepIcon from "../../assets/images/Sleep.svg";
 import filterIcon from "../../assets/images/Filter.svg";
