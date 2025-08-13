@@ -1,59 +1,14 @@
-import { useState, useEffect } from "react";
+import type { TimeProps } from "../utils/datetime/types";
+import { useDateTime } from "../utils/hooks/useDateTime";
+import { resolveSizeClass } from "../utils/tailwind/sizeClasses";
 
-const timeFmt = new Intl.DateTimeFormat("en-US", {
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-  hour12: true,
-});
+export function Time({ timeSize = "4xl", dateSize = "base" }: TimeProps) {
+  const { date, time } = useDateTime();
 
-const dateLongFmt = new Intl.DateTimeFormat("en-US", {
-  month: "short",
-  day: "numeric",
-  year: "numeric",
-});
-
-const dateShortFmt = new Intl.DateTimeFormat("en-US", {
-  month: "2-digit",
-  day: "2-digit",
-  year: "2-digit",
-});
-
-function formatTimeNow(): string {
-  return timeFmt.format(new Date());
-}
-
-function formatDateNow(): string {
-  return `${dateLongFmt.format(new Date())} | ${dateShortFmt.format(
-    new Date()
-  )}`;
-}
-
-export function Time() {
-  const [currentTime, setCurrentTime] = useState<string>(() => formatTimeNow());
-  const [currentDate, setCurrentDate] = useState<string>(() => formatDateNow());
-
-  useEffect(() => {
-    let id: number | undefined;
-    const tick = () => {
-      setCurrentTime(formatTimeNow());
-      setCurrentDate(formatDateNow());
-      const delay = 1000 - (Date.now() % 1000);
-      id = window.setTimeout(tick, delay); // recursive timeout loop
-    };
-
-    tick();
-
-    return () => {
-      if (id !== undefined) window.clearTimeout(id);
-    };
-  }, []);
   return (
-    <>
-      <div className="flex items-center flex-col text-white">
-        <span>{currentTime}</span>
-        <span>{currentDate}</span>
-      </div>
-    </>
+    <div className="flex items-center flex-col text-white">
+      <span className={`${resolveSizeClass(timeSize)} pt-5`}>{time}</span>
+      <span className={`${resolveSizeClass(dateSize)}`}>{date}</span>
+    </div>
   );
 }

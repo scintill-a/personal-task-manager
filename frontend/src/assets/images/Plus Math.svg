@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <image id="image_1" width="128" height="128" p3:href="data:image/png;base64,UklGRjoBAABXRUJQVlA4TC4BAAAvf8AfEFcw//M//2oaSYHu+KlQQo031AfwB+EYEAdiQTRgRZIsW8m3PxnPQ0egAy8YQUcpZf8iXkT0X23bNoxmpydTPgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXuv8RIvHtm3btm3b9lYvH8nm8FHeq6qqqqqqqqqqqu5/P98v+f67ebLEP/fPFA==" xmlns:p3="http://www.w3.org/1999/xlink" />
+    <pattern id="pattern_2" patternTransform="scale(0.375 0.375)" width="3.667" height="3.667">
+      <use p4:href="#image_1" xmlns:p4="http://www.w3.org/1999/xlink" />
+    </pattern>
+  </defs>
+  <rect width="48" height="48" fill="url(#pattern_2)" fill-rule="evenodd" />
+</svg>
