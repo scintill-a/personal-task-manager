@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { ICONS } from "../utils/icons/icons";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { loginWithRedirect } = useAuth0();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -35,7 +37,12 @@ export function Navbar() {
         </ul>
 
         <div className="ml-auto flex items-center space-x-2.5 mr-2">
-          <button className="px-2 py-2 text-sm">Signup </button>
+          <button
+            onClick={() => loginWithRedirect()}
+            className="px-2 py-2 text-sm"
+          >
+            Signup{" "}
+          </button>
           <p>|</p>
           <button className="px-2 py-2 text-sm">Login</button>
         </div>
