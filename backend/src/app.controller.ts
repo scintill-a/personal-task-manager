@@ -11,9 +11,9 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('/hello')
+  @Get('/protected')
   @UseGuards(JwtAuthGuard)
   hello() {
-    return `Hello you are secured!`;
+    return { message: `Hello you are secured!` };
   }
 }

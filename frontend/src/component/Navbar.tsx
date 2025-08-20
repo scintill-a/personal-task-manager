@@ -4,11 +4,20 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect, logout } = useAuth0();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
+
+  const handleLogin = () =>
+    loginWithRedirect({
+      appState: { returnTo: "/" },
+      authorizationParams: {
+        audience: import.meta.env.VITE_API_AUTH0_AUDIENCE,
+        scope: "openid profile email read:messages",
+      },
+    });
 
   return (
     <>
@@ -37,11 +46,16 @@ export function Navbar() {
         </ul>
 
         <div className="ml-auto flex items-center space-x-2.5 mr-2">
+          <button onClick={handleLogin} className="px-2 py-2 text-sm">
+            Login
+          </button>
           <button
-            onClick={() => loginWithRedirect()}
+            onClick={() =>
+              logout({ logoutParams: { returnTo: window.location.origin } })
+            }
             className="px-2 py-2 text-sm"
           >
-            Login
+            Logout
           </button>
         </div>
       </nav>
