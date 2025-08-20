@@ -41,10 +41,8 @@ export function Navbar() {
             onClick={() => loginWithRedirect()}
             className="px-2 py-2 text-sm"
           >
-            Signup{" "}
+            Login
           </button>
-          <p>|</p>
-          <button className="px-2 py-2 text-sm">Login</button>
         </div>
       </nav>
     </>
